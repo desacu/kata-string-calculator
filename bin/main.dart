@@ -9,7 +9,7 @@ int stringCalculator(String stringInput) {
   var numbers = _removeDelimiters(elements.stringNumbers, delimiter: elements.delimiter);
   if (numbers.negatives.isNotEmpty) throw ArgumentError('negatives not allowed: ${numbers.negatives.join(',')}');
 
-  return numbers.sum;
+  return numbers.removeGreaterThan(100).sum;
 }
 
 Iterable<int> _removeDelimiters(String numbersWithDelimiters, {String? delimiter}) {
