@@ -16,5 +16,8 @@ void main() {
     test('returns the sum of the numbers it receives separated by commas', () {
       expect(stringCalculator('1,2,3'), 6);
     });
+    test('returns the sum of the numbers it receives separated by commas and "\n"', () {
+      expect(stringCalculator('1\n2,3'), 6);
+    });
   });
 }
