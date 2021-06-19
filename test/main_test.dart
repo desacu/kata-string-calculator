@@ -27,5 +27,8 @@ void main() {
 
       expect(() => stringCalculator('//;' r'\n1;-2;3;-4'), exception);
     });
+    test('ignore numbers greater than 1000', () {
+      expect(stringCalculator('//;' r'\n2;1001'), 2);
+    });
   });
 }
