@@ -10,5 +10,8 @@ void main() {
     test('returns the number it receives if it is only one', () {
       expect(stringCalculator('1'), 1);
     });
+    test('returns the sum of the two numbers it receives separated by a comma', () {
+      expect(stringCalculator('1,2'), 3);
+    });
   });
 }
