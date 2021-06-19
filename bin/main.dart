@@ -1,1 +1,1 @@
-String stringCalculator(String numbers) => 'Hello world!';
+int stringCalculator(String numbers) => 0;
