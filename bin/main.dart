@@ -4,6 +4,7 @@ int stringCalculator(String stringInput) {
   if (stringInput.isEmpty) return 0;
   elements = _separateDelimiterFromNumbers(stringInput);
   var numbers = _removeDelimiters(elements.stringNumbers, delimiter: elements.delimiter);
+  if (numbers.negatives.isNotEmpty) throw ArgumentError('negatives not allowed: ${numbers.negatives.join(',')}');
 
   return numbers.sum;
 }
@@ -47,4 +48,6 @@ extension StringExtencion on String {
 
 extension ListIntegersExtension on Iterable<int> {
   int get sum => reduce((total, number) => total += number);
+
+  Iterable<int> get negatives => where((number) => number.isNegative);
 }
