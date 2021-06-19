@@ -19,5 +19,8 @@ void main() {
     test('returns the sum of the numbers it receives separated by commas and ' r'\n', () {
       expect(stringCalculator('1' r'\n2,3'), 6);
     });
+    test('returns the sum of the numbers it receives separated by specific delimiter', () {
+      expect(stringCalculator('//;' r'\n1;2;3'), 6);
+    });
   });
 }
