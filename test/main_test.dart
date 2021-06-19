@@ -4,8 +4,8 @@ import '../bin/main.dart';
 
 void main() {
   group('StringCalculator should', () {
-    test('return Hello world!', () {
-      expect(stringCalculator(), 'Hello world!');
+    test('returns 0 when it receives an empty string', () {
+      expect(stringCalculator(''), 0);
     });
   });
 }
