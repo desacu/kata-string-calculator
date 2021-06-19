@@ -1,0 +1,1 @@
+String stringCalculator() => 'Hello world!';
