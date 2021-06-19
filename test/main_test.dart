@@ -22,5 +22,10 @@ void main() {
     test('returns the sum of the numbers it receives separated by specific delimiter', () {
       expect(stringCalculator('//;' r'\n1;2;3'), 6);
     });
+    test('returns exception if it receives negative numbers', () {
+      var exception = throwsA(predicate((e) => e is ArgumentError && e.message == 'negatives not allowed: -2,-4'));
+
+      expect(() => stringCalculator('//;' r'\n1;-2;3;-4'), exception);
+    });
   });
 }
