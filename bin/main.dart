@@ -19,12 +19,11 @@ Iterable<int> _removeDelimiters(String numbersWithDelimiters, Iterable<String> d
 }
 
 String _transformOtherDelimitersToCommas(String numbers, Iterable<String> delimiters) {
-  var result = '';
   delimiters.forEach((delimiter) {
-    result = numbers.replaceAll(delimiter, ',');
+    numbers = numbers.replaceAll(delimiter, ',');
   });
 
-  return result;
+  return numbers;
 }
 
 Iterable<String> _getDelimiters(String stringDelimiters) {
