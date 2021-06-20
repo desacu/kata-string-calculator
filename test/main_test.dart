@@ -30,7 +30,7 @@ void main() {
     test('ignore numbers greater than 1000', () {
       expect(stringCalculator('//;' r'\n2;1001'), 2);
     });
-    test('the delimiter can be any size', () {
+    test('must allow the delimiter to be any size', () {
       expect(stringCalculator('//[***]' r'\n1***2***3'), 6);
     });
   });

@@ -1,6 +1,6 @@
 class CalculatorElements {
   String stringNumbers;
-  String? delimiter;
+  Iterable<String> delimiter;
 
   CalculatorElements(this.stringNumbers, this.delimiter);
 }
