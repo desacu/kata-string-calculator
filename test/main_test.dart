@@ -33,5 +33,8 @@ void main() {
     test('must allow the delimiter to be any size', () {
       expect(stringCalculator('//[***]' r'\n1***2***3'), 6);
     });
+    test('must allow multiple delimiters', () {
+      expect(stringCalculator('//[*][%]' r'\n1*2%3'), 6);
+    });
   });
 }
